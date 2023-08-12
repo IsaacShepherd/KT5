@@ -1,0 +1,155 @@
+
+  /* Custom properties */
+  :root{
+    --clr-white: white ;
+    --clr-black: black;
+
+    --ff-primary: 'Playfair Display', serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+    --ff-small-header: 'Roboto', sans-serif;
+
+    --fw-bold: 700;
+    --fw-semi-bold: 400;
+    --fw-regular:300;
+
+    --fs-main-header: 3.75rem;
+    --fs-secondary-header: 3rem;
+    --fs-small-header: 1.5rem;
+    --fs-regular: 1rem;
+/* line height */
+    --f-lh-regular: 1.6rem;
+
+
+  }
+  
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+        /* Parallax */
+  .wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    
+  }
+
+  .parallax-background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2);
+    filter: brightness(70%);
+  }
+
+  header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    }
+
+    .parallax-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .img-logo{
+        max-width: 40%;        
+    }
+
+  .primary-header{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-main-header);
+    color: var(--clr-white);
+    text-align: center;
+    text-wrap: balance;
+    padding: 0% 5%;
+
+  }
+  .secondary-header{
+    font-family: var(--ff-secondary);
+    font-weight: 600;
+    font-size: var(--ff-small-header);
+    color: var(--clr-white);
+    text-align: center;
+    padding: 0 20%;
+  }
+
+  /*  */
+  section{
+    font-size: 1rem;
+    padding: 2rem;
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .dull-small-header{
+    font-family: var(--ff-small-header);
+    text-transform: uppercase;
+    font-size: var(--fs-regular);
+    letter-spacing: 4px;
+    font-weight: var(--fw-regular);
+    text-align: center;
+  }
